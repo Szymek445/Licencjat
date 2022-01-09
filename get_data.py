@@ -3,7 +3,7 @@ import numpy as np
 from urllib.request import urlopen
 from urllib.error import HTTPError
 import json
-API_KEY = 'd2aaf7b071cdcc2e04fb7188b7e0ffe4'
+API_KEY = 'YOUR API'
 
 
 def available_companies(api_key):
@@ -277,7 +277,7 @@ class Data:
 
 
 i = 0
-while i < 40000:
+while i < len(list_of_stock):
     name = list_of_stock[i]
     name = str(name)
     try:
@@ -298,5 +298,3 @@ while i < 40000:
 
 
 
-# print(Data.key_metrics('AAPL', API_KEY))
-# print(Data.financial_ratios('AAPL', API_KEY))
