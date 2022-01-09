@@ -18,6 +18,8 @@ def available_companies(api_key):
     df.loc[df["name"].isna(), "name"] = df["symbol"]
     df = df[df['type']=='stock']
     df = df[df['exchangeShortName'] == 'NYSE']
+#     Uncoment for nasdaq
+#     df = df[df['exchangeShortName'] == 'NASDAQ']
     list_of_companies = df['symbol'].values.tolist()
 
     
